@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/w3.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="image/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+  <script src="script/funkce.js"></script>
+  <title>Čteme ze sportovní tabulky</title>
+</head>
+
+<body class="w3-content">
+  <header class="w3-container">
+    <a href="https://pracesdaty.zcu.cz">
+      <img src="image/logo.png" alt="logo" /></a>
+    <p><strong>Kategorie:</strong> Víme, co jsou data
+    </p>
+    <p><strong>Název příkladu:</strong> Čteme ze sportovní tabulky
+    </p>
+    <noscript>
+      <div class="w3-panel no-js"><strong>Pozor!</strong> Ve svém prohlížeči máte vypnutý JavaScript. Bez jeho zapnutí
+        stránky nebudou fungovat korektně.
+      </div>
+
+    </noscript>
+  </header>
+  <main class="w3-container">
+    Zvolte obtížnost
+    <select name="obtížnost" id="difficulty">
+      <option value="easy">Lehká</option>
+      <option value="medium">Střední</option>
+      <option value="hard">Těžká</option>
+    </select>
+    <button class='confirm' id="acceptDif">Potvrdit</button>
+
+    <p id='introEasy' class='intro'>Níže vidíte výslednou tabulku semifinále mistroství světa v basketbale mužů. Pozorně
+      si ji
+      prohlédněte,
+      abyste mohli odpovědět na následující otázky.
+    </p>
+
+
+    <p id='introMedium' class='intro'>Níže vidíte výslednou tabulku čtvrtfinálové části Mistrovství světa v házené žen.
+      Pozorně si ji
+      prohlédněte,
+      abyste mohli odpovědět na následující otázky. </p>
+    <p id='introHard' class='intro'>Níže vidíte výslednou tabulku Mistroství světa ve fotbale. Pozorně si ji
+      prohlédněte,
+      abyste mohli odpovědět na následující otázky.</p>
+
+    <!-- Lehká-basket,F střední-házená, těžká-fotbal -->
+
+    <div id='container' class="obal_table">
+
+    </div>
+
+    <p id='questionIntro'>Odpovězte na otázky:
+    </p>
+    <ul class="otazky">
+      <li class="otazka">
+
+        <ul class="firstQuestion">
+          <li> Který tým vstřelil nejvíce <span class='questOneVar'></span>?<sub
+              onClick="show_hide('help_1a')">(Nápověda)</sub>
+            <p class="help" id="help_1a" style="display:none;">Počet vstřelených <span class='questOneVar'></span>,
+              najedete u každého týmu vždy ve
+              sloupci "Vstřeleno".</p>
+          </li>
+          <li> Který tým vstřelil nejméně <span class='questOneVar'></span>?<sub
+              onClick="show_hide('help_1b')">(Nápověda)</sub>
+            <p class="help" id="help_1b" style="display:none;">Počet vstřelených <span class='questOneVar'></span>,
+              najedete u každého týmu vždy ve
+              sloupci "Vstřeleno".</p>
+          </li>
+          <li> Který tým obdržel nejvíce <span class='questOneVar'></span>?<sub
+              onClick="show_hide('help_1c')">(Nápověda)</sub>
+            <p class="help" id="help_1c" style="display:none;">Počet obdržených <span class='questOneVar'></span>,
+              najedete u každého týmu vždy ve
+              sloupci "Obdrženo".</p>
+          </li>
+          <li> Který tým obdržel nejméně <span class='questOneVar'></span>?<sub
+              onClick="show_hide('help_1d')">(Nápověda)</sub>
+            <p class="help" id="help_1d" style="display:none;">Počet vstřelených <span class='questOneVar'></span>,
+              najedete u každého týmu vždy ve
+              sloupci "Obdrženo".</p>
+          </li>
+
+
+        </ul>
+        <select name="teamSelect" id="teamSelect"></select>
+        <button class='confirm' id='confirm1'>Potvrdit</button>
+      </li>
+      <li class="otazka">Jak by vypadala tabulka, kdyby se&nbsp;řadila sestupně podle rozdílu ve&nbsp;skóre
+        u&nbsp;jednotlivých týmů?<sub onClick="show_hide('help_2')">(Nápověda)</sub>
+        <p class="help" id="help_2" style="display:none;">Rozdíl ve skóre získáte, když od&nbsp;počtu vstřelených branek
+          odečtete počet obdržených.</p>
+        <div id='container1' class="obal_table1">
+
+        </div>
+        <button class='confirm' id='confirm2'>Potvrdit</button>
+      </li>
+
+      <!-- <li class="otazka">Lze z tabulky určit, co rozhodlo o pořadí týmů, které získaly stejný počet bodů?<sub
+          onClick="show_hide('help_3')">(Nápověda)</sub>
+        <p class="help" id="help_3" style="display:none;">Zaměřte se na to, co jste zjišťovali v prvních dvou otázkách.
+        </p>
+      </li> -->
+      <li class="otazka">Kolik bodů se udělovalo za výhru a za remízu, když víte, že za&nbsp;prohru se&nbsp;žádné body
+        nepřidělovaly a&nbsp;neztrácely?<sub onClick="show_hide('help_4')">(Nápověda)</sub>
+        <p class="help" id="help_4" style="display:none;">Nejprve určete body za výhru podle jednoho z prvních dvou
+          týmů, kde je&nbsp;získáte snadno pouhým dělením. Následně určete body za&nbsp;remízu z&nbsp;údajů
+          o&nbsp;bodech a&nbsp;bodech za&nbsp;výhry násobených jejich počtem u&nbsp;jednoho z&nbsp;týmů, který remizoval
+          pouze jednou. Proveďte kontrolu, zda&nbsp;získané údaje souhlasí i&nbsp;po&nbsp;dosazení k&nbsp;výsledkům
+          ostatních týmů.</p>
+        <p>
+          Body za výhru <input id="winPoints" type="number">
+          <p>
+            <span id="drawPointsSpan">Body za remízu <input id="drawPoints" type="number"></span> </p>
+          Body za prohru <input id="lossPoints" type="number">
+          <button class='confirm' id="confirm3">Potvrdit</button>
+        </p>
+      </li>
+      <li class="otazka">Jak by se změnila tabulka, kdyby se za výhru uděloval o jeden bod více?<sub
+          onClick="show_hide('help_5')">(Nápověda)</sub>
+        <p class="help" id="help_5" style="display:none;">Využijte zjištění z předchozí otázky a&nbsp;vynásobte
+          u&nbsp;každého týmu zvlášť počet výher s&nbsp;počtem bodů udělovaných za&nbsp;jednu výhru, dále počet remíz
+          s&nbsp;počtem bodů udělovaných za&nbsp;jednu remízu a&nbsp;proveďte součet. Následně týmy seřaďte podle počtu
+          získaných bodů v&nbsp;nové tabulce.</p>
+        <div id='container2' class="obal_table2">
+
+        </div>
+
+        <button class='confirm' id='confirm4'>Potvrdit</button>
+      </li>
+    </ul>
+    <div id="modal" class="w3-modal"></div>
+
+
+
+  </main>
+
+  <script src="script/script.js"></script>
+  <script src="script/dragndrop.js"></script>
+</body>
+
+</html>

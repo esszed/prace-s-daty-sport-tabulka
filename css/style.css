@@ -1,0 +1,489 @@
+/* hlavicka */
+header {
+    text-align: left;
+    margin-bottom: 45px;
+    margin-top: 20px;
+}
+
+/*ruzne sirky odkazu podle obrazku odkazy*/
+div.w3-third:first-child a.icon {
+    max-width: 190px;
+}
+
+div.w3-third:nth-child(2) a.icon,
+div.w3-third:nth-child(6) a.icon,
+div.w3-third:nth-child(3) a.icon,
+div.w3-third:nth-child(5) a.icon {
+    width: 100%
+}
+
+div.w3-third:nth-child(4) a.icon {
+    max-width: 180px;
+}
+
+/* zalozky pro priklady */
+div.w3-bar button.w3-button {
+    border-radius: 4px;
+}
+
+div.w3-bar button.w3-button:first-child:hover {
+    background-color: #40f7f7 !important;
+}
+
+div.w3-bar button.w3-button:nth-child(2):hover {
+    background-color: #ffff66 !important;
+}
+
+div.w3-bar button.w3-button:nth-child(3):hover {
+    background-color: #ff9933 !important;
+}
+
+div.w3-bar button.w3-button:nth-child(4):hover {
+    background-color: #6699ff !important;
+}
+
+div.w3-bar button.active {
+    border-bottom: 2px solid Black;
+}
+
+/* alert*/
+.no-js {
+    color: #a94442;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    border-radius: 8px;
+    padding: 10px;
+
+}
+
+.no-js a {
+    color: #843534;
+    text-decoration: none;
+}
+
+
+/* footer */
+footer {
+    margin-top: 25px;
+    padding: 10px 0 0 0 !important;
+    height: 75px;
+    max-height: 150px;
+    border-top: 2px solid black;
+}
+
+footer>p {
+    font-size: .75em;
+    text-align: center;
+}
+
+footer>p>img {
+    max-width: 100%;
+}
+
+
+/* dopsane respo */
+@media (max-width:980px) {
+
+    .lineUp,
+    footer {
+        margin: 15px 5px 0 5px;
+    }
+
+    .no-js {
+        margin: 5px;
+    }
+}
+
+@media (max-width:600px) {
+    footer {
+        margin-top: 25px;
+    }
+}
+
+
+/* pismo */
+strong,
+b {
+    font-weight: bold;
+}
+
+.red {
+    color: Red;
+    font-weight: bold;
+}
+
+.green {
+    color: Green;
+    font-weight: bold;
+}
+
+/* modalni okno */
+#modal {
+    z-index: 99;
+}
+
+#modal header {
+    margin: 0;
+}
+
+#modal .chyba {
+    /* border: 2px solid red; */
+    border-radius: 5px;
+    cursor: default;
+}
+
+#modal .ok {
+    /* border: 2px solid green; */
+    border-radius: 5px;
+    cursor: default;
+}
+
+#modal .neutr {
+    /* border: 2px solid yellow; */
+    border-radius: 5px;
+    cursor: default;
+}
+
+#modal h6 {
+    text-align: left;
+    margin-left: 16px;
+}
+
+#modal p {
+    margin: 10px 0;
+}
+
+/* modal konec */
+
+/* obsah */
+main.w3-container p {
+    text-align: justify;
+    padding: 10px 0;
+}
+
+main.w3-container table {
+    margin: 20px auto;
+}
+
+div.obal_table {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+main.w3-container table th {
+    font-weight: bold;
+}
+
+/* tabulky a barevne designy */
+/* data */
+table.capI,
+table.capI tr {
+    text-align: center;
+    border: 1px solid #cf7b79
+}
+
+table.capI tr:nth-child(odd) {
+    background: White;
+}
+
+table.capI tr:nth-child(even) {
+    background: #efd3d2;
+}
+
+table.capI th {
+    background: #c0504d;
+    color: White;
+}
+
+table.capI tr td:first-child {
+    text-align: right;
+}
+
+table.capI tr td:nth-child(2) {
+    text-align: left;
+}
+
+table.capI tr td {
+    padding: 2px 5px;
+}
+
+table.capI tr th {
+    padding: 2px 8px;
+}
+
+/* ul a li */
+ul.otazky li {
+    padding: 5px 0;
+}
+
+ul.otazky li sub {
+    cursor: pointer;
+}
+
+ul.otazky li p.help {
+    font-size: .75em;
+    padding-left: 10px;
+}
+
+table.cap4.prohlizece {
+    margin-top: 80px;
+}
+
+/* grafy */
+.graph {
+    width: 800px !important;
+    height: 400px !important;
+    margin: auto;
+}
+
+div.graph div {
+    display: table;
+    margin: 0 auto;
+}
+
+
+ul.otazky>li {
+    display: none;
+}
+
+.draggable-table {
+    position: relative;
+
+}
+
+.draggable-table .draggable-table__drag {
+
+    position: absolute;
+
+}
+
+#introEasy {
+    display: none
+}
+#introMedium {
+    display: none
+}
+#introHard {
+    display: none
+}
+
+#questionIntro {
+    display: none
+}
+
+.confirm {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.confirm:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.confirm {
+
+    border-radius: 4px;
+    color: blakc;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+/* hlavicka */
+header {
+    text-align: left;
+    margin-bottom: 45px;
+    margin-top: 20px;
+}
+
+/*ruzne sirky odkazu podle obrazku odkazy*/
+div.w3-third:first-child a.icon {
+    max-width: 190px;
+}
+
+div.w3-third:nth-child(2) a.icon,
+div.w3-third:nth-child(6) a.icon,
+div.w3-third:nth-child(3) a.icon,
+div.w3-third:nth-child(5) a.icon {
+    width: 100%
+}
+
+div.w3-third:nth-child(4) a.icon {
+    max-width: 180px;
+}
+
+/* zalozky pro priklady */
+div.w3-bar button.w3-button {
+    border-radius: 4px;
+}
+
+div.w3-bar button.w3-button:first-child:hover {
+    background-color: #40f7f7 !important;
+}
+
+div.w3-bar button.w3-button:nth-child(2):hover {
+    background-color: #ffff66 !important;
+}
+
+div.w3-bar button.w3-button:nth-child(3):hover {
+    background-color: #ff9933 !important;
+}
+
+div.w3-bar button.w3-button:nth-child(4):hover {
+    background-color: #6699ff !important;
+}
+
+div.w3-bar button.active {
+    border-bottom: 2px solid Black;
+}
+
+/* alert*/
+.no-js {
+    color: #a94442;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    border-radius: 8px;
+    padding: 10px;
+
+}
+
+.no-js a {
+    color: #843534;
+    text-decoration: none;
+}
+
+/* mozna se vyuzije */
+
+/* footer */
+footer {
+    margin-top: 25px;
+    padding: 10px 0 0 0 !important;
+    height: 75px;
+    max-height: 150px;
+    border-top: 2px solid black;
+}
+
+footer>p {
+    font-size: .75em;
+    text-align: center;
+}
+
+footer>p>img {
+    max-width: 100%;
+}
+
+
+/* dopsane respo */
+@media (max-width:980px) {
+
+    .lineUp,
+    footer {
+        margin: 15px 5px 0 5px;
+    }
+
+    .no-js {
+        margin: 5px;
+    }
+}
+
+@media (max-width:600px) {
+    footer {
+        margin-top: 25px;
+    }
+}
+
+
+/* pismo */
+strong,
+b {
+    font-weight: bold;
+}
+
+.red {
+    color: Red;
+    font-weight: bold;
+}
+
+.green {
+    color: Green;
+    font-weight: bold;
+}
+
+/* modalni okno */
+#modal {
+    z-index: 99;
+}
+
+#modal .w3-modal-content {
+    background-color: transparent !important;
+    box-shadow: none;
+}
+
+#modal .w3-container {
+    padding: 0px;
+    position: relative;
+}
+
+#modal img {
+    max-width: 100%;
+    width: 100%;
+}
+
+#modal header {
+    margin: 0;
+}
+
+#modal p {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    bottom: 0px;
+    padding: 15px;
+}
+
+div.w3-modal-content.neutr p {
+    padding-top: 45px !important;
+}
+
+@media (min-width: 993px) {
+    .w3-modal-content {
+        width: 700px !important;
+    }
+
+    #modal p {
+        height: 110px;
+    }
+}
+
+@media (max-width: 768px) {
+    #modal p {
+        height: 87px;
+    }
+}
+
+@media (max-width: 400px) {
+    #modal p {
+        height: 70px;
+        font-size: .75em;
+    }
+}
+
+.modal-close {
+    background: white;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-weight: bold;
+    padding: 5px 10px !important;
+    right: 3px;
+}
+
+/* modal konec */
